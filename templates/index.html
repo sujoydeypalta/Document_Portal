@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Document Portal</title>
+  <title>Document Portal by Sujoy Dey</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Google Fonts for classy look -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
   <header class="app-header">
     <div class="brand">
       <span class="logo">📚</span>
-      <h1>Document Portal</h1>
+      <h1>Document Portal by Sujoy Dey</h1>
     </div>
     <nav class="mode-switch">
       <button class="tab-btn active" data-tab="analysis">Document Analysis</button>
@@ -27,13 +27,13 @@
     <!-- ============== ANALYSIS ============== -->
     <section id="tab-analysis" class="tab-panel active">
       <div class="card">
-        <h2>🔎 Analyze a Document</h2>
+        <h2>🔎 Analyze A PDF Document</h2>
         <p class="muted">Upload a PDF and get structured analysis.</p>
         <form id="form-analyze" class="form-grid" onsubmit="return false;">
           <div class="field">
             <label for="an-file">Upload PDF</label>
             <input id="an-file" type="file" accept=".pdf" required />
-            <small class="help">Only .pdf files</small>
+            <small class="help">Upload only .pdf files</small>
           </div>
           <div class="actions">
             <button id="btn-analyze" class="btn primary">Run Analysis</button>
@@ -84,7 +84,7 @@
     <!-- ============== CHAT ============== -->
     <section id="tab-chat" class="tab-panel">
       <div class="card">
-        <h2>💬 Chat with your Documents</h2>
+        <h2>💬 Chat With Your Documents</h2>
         <p class="muted">Upload PDF/DOCX/TXT; we’ll index to FAISS and enable RAG chat.</p>
 
         <form id="form-chat-index" class="form-grid" onsubmit="return false;">
@@ -151,7 +151,7 @@
   </main>
 
   <footer class="app-footer">
-    <div>© Document Portal • Demo UI</div>
+    <div>© Document Portal by Sujoy Dey • Demo UI</div>
     <div class="tiny">Frontend only – hook to your FastAPI later.</div>
   </footer>
 

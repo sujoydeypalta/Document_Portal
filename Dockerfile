@@ -1,3 +1,7 @@
+# Purpose of this Docker File is to create Docker Image (also called docket snapshoy) 
+# which is nothing but docker container compatible instruction and 
+# will be executed inside Docker Container. You can pull this image in Docker Desktop -> Container
+# -> Pull the image - >Run the image
 # Use official Python image
 FROM python:3.10-slim
 
@@ -5,16 +9,16 @@ FROM python:3.10-slim
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Set workdir
+# Set workdir. Name of the directory is app
 WORKDIR /app
 
 # Install OS dependencies
 RUN apt-get update && apt-get install -y build-essential poppler-utils && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements
+# Copy requirements. See the "." after a space. It means current directory
 COPY requirements.txt .
 
-# Copy project files
+# Copy project files. ***THIS IS IMPORTANT** COPYING ALL PROJECT FILES
 COPY . .
 
 # Install dependencies
