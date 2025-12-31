@@ -48,7 +48,7 @@ def health() -> Dict[str, str]:
     log.info("Health check passed.")
     return {"status": "ok", "service": "document-portal"}
 
-# ---------- ANALYZE ----------
+# ---------- ANALYZE DOCUMENT----------
 @app.post("/analyze")
 async def analyze_document(file: UploadFile = File(...)) -> Any:
     try:
@@ -66,7 +66,7 @@ async def analyze_document(file: UploadFile = File(...)) -> Any:
         log.exception("Error during document analysis")
         raise HTTPException(status_code=500, detail=f"Analysis failed: {e}")
 
-# ---------- COMPARE ----------
+# ---------- COMPARE DOCUMENTS ----------
 @app.post("/compare")
 async def compare_documents(reference: UploadFile = File(...), actual: UploadFile = File(...)) -> Any:
     try:

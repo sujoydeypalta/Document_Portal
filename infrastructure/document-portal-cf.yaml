@@ -30,7 +30,7 @@ Resources:
         ScanOnPush: true
       ImageTagMutability: MUTABLE
 
-  ### VPC, Subnets, Internet Gateway
+  ### VPC, Subnets, Internet Gateway, and Route Table
   MyVPC:
     Type: AWS::EC2::VPC
     Properties:
